@@ -1,24 +1,30 @@
 const cards = document.querySelectorAll('.card');
 
 cards.forEach(card => {
+  // Desktop hover effect
+  card.addEventListener('mousemove', (e) => {
+    const x = e.offsetX;
+    const y = e.offsetY;
 
-card.addEventListener('mousemove',(e)=>{
+    card.style.transform =
+      `perspective(1000px)
+       rotateX(${(y - card.offsetHeight / 2) / 10}deg)
+       rotateY(${-(x - card.offsetWidth / 2) / 10}deg)`;
+  });
 
-const x = e.offsetX;
-const y = e.offsetY;
+  card.addEventListener('mouseleave', () => {
+    card.style.transform =
+      'perspective(1000px) rotateX(0) rotateY(0)';
+  });
 
-card.style.transform =
-`perspective(1000px)
-rotateX(${(y-100)/10}deg)
-rotateY(${-(x-100)/10}deg)`;
+  // Mobile touch support
+  card.addEventListener('touchstart', () => {
+    card.style.transform =
+      'perspective(1000px) rotateX(0) rotateY(0)';
+  });
 
-});
-
-card.addEventListener('mouseleave',()=>{
-
-card.style.transform =
-'perspective(1000px) rotateX(0) rotateY(0)';
-
-});
-
+  card.addEventListener('touchend', () => {
+    card.style.transform =
+      'perspective(1000px) rotateX(0) rotateY(0)';
+  });
 });
