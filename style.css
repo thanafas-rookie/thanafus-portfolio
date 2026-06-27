@@ -113,7 +113,7 @@ border:2px solid #00aaff;
 
 .socials{
 position:fixed;
-left:12px;
+left:10px;
 top:50%;
 transform:translateY(-50%);
 display:flex;
@@ -185,6 +185,28 @@ transform:translateY(0);
     margin: 10px 0;
     display: block;
   }
+
+  nav {
+  display: flex;          /* ensures horizontal layout */
+  gap: 20px;              /* space between links */
+  flex-wrap: wrap;        /* allows wrapping if screen is too small */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
 
   .hero {
     flex-direction: column;
