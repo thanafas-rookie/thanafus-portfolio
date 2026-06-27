@@ -174,3 +174,79 @@ opacity:1;
 transform:translateY(0);
 }
 }
+/* Tablet view */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  nav a {
+    margin: 10px 0;
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .description {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .about-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .socials {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0;
+    transform: none;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .intro {
+    font-size: 18px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
